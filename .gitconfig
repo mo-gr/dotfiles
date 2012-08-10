@@ -1,0 +1,10 @@
+[user]
+	name = Moritz Grauel
+	email = mo@notadomain.com
+[http]
+	sslKey = /Users/mo/.ssh/id_rsa
+[core]
+	excludesfile = /Users/mo/.gitignore
+	editor = /usr/bin/vim
+[credential]
+	helper = osxkeychain

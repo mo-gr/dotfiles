@@ -1,0 +1,17 @@
+# Mac OS X poop
+.DS_Store
+
+# IntelliJ poop
+.idea
+*/*.iml
+*.iml
+out
+atlassian-ide-plugin.xml
+
+
+# Maven poop
+*/target
+
+target
+
+overlays
