@@ -1,3 +1,7 @@
 set background=dark
 colorscheme solarized
 inoremap jj <Esc>
+
+" Settings for VimClojure
+let g:vimclojure#ParenRainbow=1 " Rainbow parentheses'!
+let g:vimclojure#HighlightBuiltins=1 " Highlight Clojure's builtins

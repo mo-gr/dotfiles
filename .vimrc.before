@@ -1,0 +1,5 @@
+call janus#disable_plugin('puppet', "don't need it yet")
+call janus#disable_plugin('ruby', "don't need it yet")
+call janus#disable_plugin('scss', "don't need it yet")
+call janus#disable_plugin('vimwiki', "don't need it yet")
+call janus#disable_plugin('vimclojure', "use newer version")
