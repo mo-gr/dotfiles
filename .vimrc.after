@@ -3,5 +3,7 @@ colorscheme solarized
 inoremap jj <Esc>
 
 " Settings for VimClojure
+autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 let g:vimclojure#ParenRainbow=1 " Rainbow parentheses'!
 let g:vimclojure#HighlightBuiltins=1 " Highlight Clojure's builtins
+let g:vimclojure#WantNailgun=1

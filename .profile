@@ -37,3 +37,5 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 export PLAY_HOME=~/Coding/play-2.0
 export PATH=$PLAY_HOME:$PATH
+
+export PATH=$PATH:/usr/local/Cellar/ruby/1.9.3-p194/bin
