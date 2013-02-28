@@ -17,12 +17,14 @@ alias serve="python -m SimpleHTTPServer"
 alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/mpextended-mt.mpBinaries/Contents/MacOS/mplayer"
 alias please=sudo
 
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
-export PS1='\[\e[1;32m\]\h:\w$(__git_ps1 "(%s)") \u\$ \[\e[0m\]'
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
+
+export PS1='\[\e[1;32m\]\h:\w$(__git_ps1 "(%s)") \u\$ \[\e[0m\]'
 
 # ENVIRONMENT
 # DO NOT FORGET TO SET ENVIRONMENTS IN ~/.MacOSX/environment.plist AS WELL!!!
@@ -39,3 +41,6 @@ export PLAY_HOME=~/Coding/play-2.0
 export PATH=$PLAY_HOME:$PATH
 
 export PATH=$PATH:/usr/local/Cellar/ruby/1.9.3-p194/bin
+
+# NODE
+export PATH=/usr/local/share/npm/bin:$PATH
