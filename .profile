@@ -28,7 +28,7 @@ export PS1='\[\e[1;32m\]\h:\w$(__git_ps1 "(%s)") \u\$ \[\e[0m\]'
 
 # ENVIRONMENT
 # DO NOT FORGET TO SET ENVIRONMENTS IN ~/.MacOSX/environment.plist AS WELL!!!
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
 export M2_HOME=~/Coding/apache-maven
 export MAVEN_REPOSITORY=~/.m2/repository
 export SCALA_HOME=~/Coding/scala

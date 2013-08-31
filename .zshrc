@@ -32,7 +32,7 @@ ZSH_THEME="robbyrussell-mo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras brew lein mvn osx ant vi-mode encode64 lol urltools)
+plugins=(git git-extras brew lein mvn osx ant vi-mode encode64 lol urltools safe-paste last-working-dir)
 # terminalapp makes trouble in the prompt
 
 source $ZSH/oh-my-zsh.sh
@@ -51,3 +51,26 @@ function zle-line-init zle-keymap-select {
 }
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+alias ql="qlmanage -p 2>/dev/null"
+alias wr="open -a WriteRoom"
+alias med="open -a Marked"
+alias ia="open -a iA\ Writer"
+alias serve="python -m SimpleHTTPServer"
+alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/mpextended-mt.mpBinaries/Contents/MacOS/mplayer"
+
+dan() { open dash://man:$1 }
+
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
+# npm path
+export PATH=$PATH:/Users/mo/Coding/sandbox/cloudserver/node_modules/.bin
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
+
+export PS1="👻  $PS1"
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

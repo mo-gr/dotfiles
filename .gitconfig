@@ -25,3 +25,5 @@
 	trustExitCode = true
 [merge]
 	tool = Kaleidoscope
+[rerere]
+	enabled = true
