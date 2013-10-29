@@ -7,3 +7,23 @@ autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 let g:vimclojure#ParenRainbow=1 " Rainbow parentheses'!
 let g:vimclojure#HighlightBuiltins=1 " Highlight Clojure's builtins
 let g:vimclojure#WantNailgun=1
+let g:clojure_conceal_extras=1
+
+" Strip trailing whitespace
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+nmap <leader><space> :call Preserve("%s/\\s\\+$//e")<CR>
+
+set laststatus=2
+" Map leader-tab to emmet-trigger
+imap <leader><tab> <C-y>,
