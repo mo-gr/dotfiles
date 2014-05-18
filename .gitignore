@@ -123,3 +123,10 @@ xcuserdata
 # We're using source-control, so this is a "feature" that we do not want!
 
 *.moved-aside
+
+node_modules
+**/node_modules
+
+**/.sass-cache
+
+config.codekit
