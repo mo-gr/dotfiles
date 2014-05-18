@@ -1,0 +1,28 @@
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+
+# Monitor Aliases
+alias mon-laptop      0
+
+# Aliases
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+
+# Bindings
+bind g:alt grid padding:5 1440x900:3,2
+bind f:alt hint ASDFGHJKLQWERTYUIOP
+bind pageUp:cmd ${full}
+bind home:cmd ${lefthalf}
+bind end:cmd ${righthalf}
+bind pageDown:cmd throw next
