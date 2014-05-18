@@ -10,20 +10,6 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = current
-[mergetool]
-	keepBackup = true
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
-	tool = Kaleidoscope
+	default = simple
 [rerere]
 	enabled = true
