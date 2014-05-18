@@ -32,13 +32,13 @@ ZSH_THEME="robbyrussell-mo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras brew lein mvn osx ant vi-mode encode64 lol urltools safe-paste last-working-dir)
+plugins=(git git-extras brew brew-cask lein mvn osx ant vi-mode encode64 lol urltools safe-paste last-working-dir)
 # terminalapp makes trouble in the prompt
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/share/npm/bin:/Users/mo/Coding/play-2.0:/Users/mo/Coding/scala/bin:/usr/local/bin:/Users/mo/.bin:/Users/mo/Coding/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mo/.rvm/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin
+export PATH=/Users/mo/Coding/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/mo/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 # bind jj to go to vi normal mode (same as ESC)
 bindkey -M viins 'jj' vi-cmd-mode
@@ -57,16 +57,13 @@ alias wr="open -a WriteRoom"
 alias med="open -a Marked"
 alias ia="open -a iA\ Writer"
 alias serve="python -m SimpleHTTPServer"
-alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/mpextended-mt.mpBinaries/Contents/MacOS/mplayer"
+alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
 
 dan() { open dash://man:$1 }
 
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
-# npm path
-export PATH=$PATH:/Users/mo/Coding/sandbox/cloudserver/node_modules/.bin
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
 
 export PS1="👻  $PS1"
 
@@ -74,3 +71,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# fix online help for brew zsh
+  unalias run-help
+  autoload run-help
+  HELPDIR=/usr/local/share/zsh/helpfiles
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
