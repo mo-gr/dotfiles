@@ -25,9 +25,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <leader>k <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>l <C-w>l
+imap <Tab> <C-P>
 
 nnoremap <leader>fs :w<enter>
 
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
 
+set splitright
+set splitbelow
