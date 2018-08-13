@@ -10,6 +10,7 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = simple
+	default = current
 [rerere]
 	enabled = true
+	autoupdate = true
