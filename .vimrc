@@ -10,6 +10,8 @@ call minpac#add('tpope/vim-sensible')
 call minpac#add('plasticboy/vim-markdown')
 call minpac#add('ajh17/spacegray.vim')
 call minpac#add('leafgarland/typescript-vim')
+call minpac#add('tpope/vim-speeddating')
+call minpac#add('jceb/vim-orgmode')
 " call minpac#update()
 
 set encoding=utf-8
@@ -17,6 +19,7 @@ set encoding=utf-8
 inoremap jj <Esc>
 
 let mapleader="\<Space>"
+let maplocalleader=","
 nnoremap <C-h> <C-w>h
 nnoremap <leader>h <C-w>h
 nnoremap <C-j> <C-w>j
