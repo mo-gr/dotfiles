@@ -56,3 +56,4 @@ set conceallevel=2
 
 set splitright
 set splitbelow
+set hidden
