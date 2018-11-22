@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll=ls -a
 alias isodate="date \"+%Y-%m-%d\""
+alias pie="racket -l pie -i"
 
 function append () {
   cat <(eval $1) <(echo "$2")

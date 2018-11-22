@@ -1,5 +1,7 @@
 packadd minpac
 
+set rtp+=/usr/local/opt/fzf
+
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
@@ -15,7 +17,10 @@ call minpac#add('jceb/vim-orgmode')
 call minpac#add('machakann/vim-highlightedyank')
 call minpac#add('purescript-contrib/purescript-vim')
 call minpac#add('frigoeu/psc-ide-vim')
+"call minpac#add('maxbrunsfeld/vim-yankstack')
+call minpac#add('junegunn/fzf.vim')
 " call minpac#update()
+
 
 if has('nvim')
    call minpac#add('ndmitchell/ghcid')
@@ -45,11 +50,21 @@ imap <Tab> <C-P>
 
 nnoremap <leader>fs :w<enter>
 
+"nmap <leader>p <Plug>yankstack_substitute_older_paste
+"nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
 if has('nvim')
     nnoremap <leader>` :Nuake<CR>
     tnoremap <leader>` <C-\><C-n>:Nuake<CR>
 "    inoremap <leader>` <C-\><C-n>:Nuake<CR>
 endif
+
+" FZF
+let g:fzf_layout = { 'up': '~40%' }
+
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>r :Rg<space>
+nnoremap <leader>g :GFiles<cr>
 
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
