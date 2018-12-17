@@ -117,3 +117,5 @@ compinit
 
 # don't share history in living tabs
 unsetopt share_history
+
+export PATH=/Users/mgrauel/.local/bin:$PATH

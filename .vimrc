@@ -65,6 +65,10 @@ let g:fzf_layout = { 'up': '~40%' }
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>r :Rg<space>
 nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>l :Lines<CR>
+nnoremap <leader>] :Tags<CR>
+nnoremap <leader>b] :BTags<CR>
 
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
