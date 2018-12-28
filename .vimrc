@@ -19,6 +19,7 @@ call minpac#add('purescript-contrib/purescript-vim')
 call minpac#add('frigoeu/psc-ide-vim')
 "call minpac#add('maxbrunsfeld/vim-yankstack')
 call minpac#add('junegunn/fzf.vim')
+call minpac#add('w0rp/ale')
 " call minpac#update()
 
 
@@ -76,3 +77,15 @@ set conceallevel=2
 set splitright
 set splitbelow
 set hidden
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {}
+let g:ale_fixers['haskell'] = ['hfmt']
+let g:ale_linters = {
+\   'haskell': ['ghc', 'hlint'],
+\}
+
+nmap <silent> <Leader><  <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>>  <Plug>(ale_next_wrap)
+nmap <silent> <Leader>?  <Plug>(ale_detail)
+nmap <silent> <Leader>!  <Plug>(ale_fix)
