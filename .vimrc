@@ -49,6 +49,10 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>l <C-w>l
 imap <Tab> <C-P>
 
+nnoremap <silent> <Tab> :bn<CR>
+nnoremap <silent> <S-Tab> :bp<CR>
+nnoremap <silent> <leader>d :Explore<CR>
+
 nnoremap <leader>fs :w<enter>
 
 "nmap <leader>p <Plug>yankstack_substitute_older_paste
@@ -78,9 +82,15 @@ set splitright
 set splitbelow
 set hidden
 
-let g:ale_fix_on_save = 1
+let g:ale_set_signs = 0
+hi link ALEErrorLine ErrorMsg
+hi link ALEWarningLine WarningMsg
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_delay = 0
+let g:ale_fix_on_save = 0
 let g:ale_fixers = {}
-let g:ale_fixers['haskell'] = ['hfmt']
+let g:ale_fixers['haskell'] = ['hfmt', 'hlint']
 let g:ale_linters = {
 \   'haskell': ['ghc', 'hlint'],
 \}
