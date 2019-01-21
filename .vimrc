@@ -24,6 +24,7 @@ call minpac#add('w0rp/ale')
 
 
 if has('nvim')
+   call minpac#add('neovimhaskell/haskell-vim')
    call minpac#add('ndmitchell/ghcid')
    call minpac#add('https://gitlab.com/Lenovsky/nuake.git')
 endif
